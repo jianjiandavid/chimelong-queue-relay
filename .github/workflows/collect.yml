@@ -8,7 +8,7 @@ on:
   workflow_dispatch: # 支持手动触发
 
 env:
-  SERVER_URL: http://8.148.181.106:3000
+  SERVER_URL: http://8.148.181.106
   RELAY_TOKEN: chimelong2026
 
 jobs:

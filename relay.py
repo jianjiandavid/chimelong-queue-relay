@@ -13,7 +13,7 @@ from datetime import datetime, timezone, timedelta
 
 # ==================== 配置 ====================
 API_URL = 'https://api.themeparks.wiki/v1/entity/6f8764b7-172a-4fcf-8fec-10d3e44a55e4/live'
-SERVER_URL = os.environ.get('SERVER_URL', 'http://8.148.181.106:3000')
+SERVER_URL = os.environ.get('SERVER_URL', 'http://8.148.181.106')
 RELAY_TOKEN = os.environ.get('RELAY_TOKEN', 'chimelong2026')
 
 SELECTED_ATTRACTIONS = [

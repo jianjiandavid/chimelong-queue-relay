@@ -110,9 +110,14 @@ def main():
     print(f'=== 长隆排队数据中继 ===')
     print(f'北京时间: {get_beijing_time().strftime("%Y-%m-%d %H:%M")}')
     
-    if not is_within_operating_hours():
+    force = os.environ.get('FORCE_COLLECT', '0') == '1'
+    
+    if not is_within_operating_hours() and not force:
         print('当前不在营业时间内 (10:00-19:30)，跳过采集')
         return
+    
+    if force and not is_within_operating_hours():
+        print('强制采集模式（手动触发）')
     
     print(f'获取 API 数据: {API_URL}')
     api_data = fetch_api_data()
